@@ -48,8 +48,9 @@ void *eat(void *philo) {
   sem_getvalue(philo_cast->leftFork,&valueLeftFork);
   sem_getvalue(philo_cast->rightFork,&valueRightFork);
   if(valueLeftFork==0||valueRightFork==0){
-    thinking(philo_cast);
     
+    thinking(philo_cast);
+
     sem_getvalue(philo_cast->leftFork,&valueLeftFork);
     sem_getvalue(philo_cast->rightFork,&valueRightFork);
   };
